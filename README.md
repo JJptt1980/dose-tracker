@@ -25,13 +25,14 @@
 
 ## Android APK（選用）
 
-除了「加到主畫面」，也可以安裝 Android APK：到 [Releases](https://github.com/JJptt1980/dose-tracker/releases) 下載最新的 `dose-tracker-v1.0.0.apk`。
+除了「加到主畫面」，也可以安裝 Android APK：到 [Releases](https://github.com/JJptt1980/dose-tracker/releases) 下載最新的 `dose-tracker-v1.0.1.apk`。
 
 - APK 只是載入 `https://jjptt1980.github.io/dose-tracker/` 的外殼（Capacitor）。網站更新時 app 內容會自動跟著更新，不需要重新安裝；實際版本以 app 最底下顯示的版本號為準。
 - 需要網路才能開啟，沒有網路時無法載入。
 - 資料存在 APK 內嵌的瀏覽器，與 Chrome 網頁版分開。解除安裝或清除 app 資料會遺失記錄，請定期在「設定」按「產生備份文字」另存。
 - Google Drive 備份在作者的手機上測試可正常使用，其他機型未測。
 - 從 Chrome 網頁版換到 APK：在網頁版「產生備份文字」，到 APK「從文字還原」；或兩邊連線同一個 Google 帳號，由 Drive 載入。
+- 從 1.0.0 換到 1.0.1：網站搬到新網址，舊版 1.0.0 已經無法開啟。1.0.1 的套件名稱也改了，無法直接覆蓋安裝，新舊版會同時出現。請在 1.0.1 連線 Google Drive 載入資料，確認無誤後再解除安裝舊版；舊版沒有開過 Drive 備份的話，請先不要解除安裝。
 - 此版本使用 debug 簽章，僅供個人側載。安裝時需允許「安裝未知應用程式」。之後更新 APK 必須使用同一把簽章金鑰，否則要先解除安裝，記錄會一併消失。
 
 ## Health Connect 同步（Android APK）
