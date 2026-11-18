@@ -2,7 +2,7 @@
 
 一個在手機上使用的單頁網頁 app，用來記錄每週注射劑量、注射部位與體重，並畫出圖表。所有功能都在一個 `index.html` 檔案裡，不需要安裝、不需要伺服器。
 
-**線上使用：** https://killnopig.github.io/dose-tracker/
+**線上使用：** https://jjptt1980.github.io/dose-tracker/
 
 > 本 app 是個人記錄與趨勢檢視工具，不是醫療器材，不提供診斷、治療或用藥建議。請先閱讀下方〈免責聲明〉。
 
@@ -25,9 +25,9 @@
 
 ## Android APK（選用）
 
-除了「加到主畫面」，也可以安裝 Android APK：到 [Releases](https://github.com/killnopig/dose-tracker/releases) 下載最新的 `dose-tracker-v1.0.0.apk`。
+除了「加到主畫面」，也可以安裝 Android APK：到 [Releases](https://github.com/JJptt1980/dose-tracker/releases) 下載最新的 `dose-tracker-v1.0.0.apk`。
 
-- APK 只是載入 `https://killnopig.github.io/dose-tracker/` 的外殼（Capacitor）。網站更新時 app 內容會自動跟著更新，不需要重新安裝；實際版本以 app 最底下顯示的版本號為準。
+- APK 只是載入 `https://jjptt1980.github.io/dose-tracker/` 的外殼（Capacitor）。網站更新時 app 內容會自動跟著更新，不需要重新安裝；實際版本以 app 最底下顯示的版本號為準。
 - 需要網路才能開啟，沒有網路時無法載入。
 - 資料存在 APK 內嵌的瀏覽器，與 Chrome 網頁版分開。解除安裝或清除 app 資料會遺失記錄，請定期在「設定」按「產生備份文字」另存。
 - Google Drive 備份在作者的手機上測試可正常使用，其他機型未測。
@@ -64,7 +64,7 @@
    外掛本身只預先宣告體重、心率等基本項目，血壓、體脂、基礎代謝要自己加。
 3. 編輯 `android/app/src/main/res/values/strings.xml`，在 `<resources>` 裡加入隱私權政策連結（Health Connect 授權畫面會用到）：
    ```xml
-   <string name="health_connect_privacy_policy_url">https://killnopig.github.io/dose-tracker/privacy.html</string>
+   <string name="health_connect_privacy_policy_url">https://jjptt1980.github.io/dose-tracker/privacy.html</string>
    ```
 4. 如果編譯時出現 minSdk 相關錯誤，把 `android/variables.gradle` 的 `minSdkVersion` 改成 26 以上。
 5. 把 `android/app/build.gradle` 的 `versionCode` 加 1、`versionName` 改成新版本，才能覆蓋安裝舊版。
@@ -92,7 +92,7 @@
 1. 到 [Google Cloud Console](https://console.cloud.google.com/) 建立專案。
 2. 啟用 **Google Drive API**。
 3. 設定 OAuth 同意畫面：類型選「外部」，加入範圍 `https://www.googleapis.com/auth/drive.appdata`。
-4. 在「憑證」建立 **OAuth 用戶端 ID**，類型選「網頁應用程式」，已授權的 JavaScript 來源填你的網站來源，例如 `https://killnopig.github.io`（不含路徑）。
+4. 在「憑證」建立 **OAuth 用戶端 ID**，類型選「網頁應用程式」，已授權的 JavaScript 來源填你的網站來源，例如 `https://jjptt1980.github.io`（不含路徑）。
 5. 把產生的用戶端 ID 貼到 `index.html` 裡的 `GOOGLE_CLIENT_ID`。
 6. 應用程式若停在「測試」狀態，只有你加入的測試使用者能登入；要開放給所有人，需發布為「正式版」。用戶端 ID 本身是公開資訊，可以放在公開 repository。
 
@@ -292,8 +292,8 @@
 
 ## 分支與測試版
 
-- `main` 分支是穩定的正式版，網址為 `https://killnopig.github.io/dose-tracker/`。
-- `dev` 分支用來開發新功能，部署在 `https://killnopig.github.io/dose-tracker/beta/`。
+- `main` 分支是穩定的正式版，網址為 `https://jjptt1980.github.io/dose-tracker/`。
+- `dev` 分支用來開發新功能，部署在 `https://jjptt1980.github.io/dose-tracker/beta/`。
 - 測試版的本機資料與 Google Drive 備份檔都和正式版分開（網址含 `beta` 時自動切換），不會影響正式版的記錄。想用真實資料測試，請在正式版「產生備份文字」，再到測試版「從文字還原」。
 - 新功能在 `dev` 測試完成後，再把 `dev` 合併進 `main`，正式版就會更新。
 - 部署由 `.github/workflows/pages.yml` 負責，這個檔案在 `main` 和 `dev` 兩個分支都要有。
